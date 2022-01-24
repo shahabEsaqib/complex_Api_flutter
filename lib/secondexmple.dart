@@ -30,7 +30,7 @@ class SelfModelExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Api"),
+        title: const Text("Api"),
       ),
       body: Column(
 
@@ -40,7 +40,7 @@ class SelfModelExample extends StatelessWidget {
               future: photosApi(),
               builder: (context,AsyncSnapshot<List<Photos>> snapshot){
               if (!snapshot.hasData){
-                return Text("Loading");
+                return const Text("Loading");
               }else{
                 return ListView.builder(
                   itemCount: photosList.length,

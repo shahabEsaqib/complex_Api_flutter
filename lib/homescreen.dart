@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Api"),
+        title: const Text("Api"),
       ),
       body: Column(
 
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
               future: getpostApi(),
               builder: (context,snapshot){
               if (!snapshot.hasData){
-                return Text("Loading");
+                return const Text("Loading");
               }else{
                 return ListView.builder(
                   itemCount: listModel.length,

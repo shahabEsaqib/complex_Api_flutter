@@ -88,12 +88,12 @@ class ReusableRow extends StatelessWidget {
     return  Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(title),
-                                Text(value)
-                              ],
-                            ),
-    );
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(title),
+            Text(value)
+          ],
+        ),
+  );
   }
 }
