@@ -57,7 +57,7 @@ class _ProductExampleState extends State<ProductExample> {
                                   leading: CircleAvatar(
                                     backgroundImage: NetworkImage(
                                       
-                                      snapshot.data!.data![index].image.toString(),scale: 2),
+                                      snapshot.data!.data![index].image.toString(),scale: 1),
                                   ),
                                 ),
                       ),
@@ -95,12 +95,10 @@ class _ProductExampleState extends State<ProductExample> {
                                         scrollDirection: Axis.horizontal,
                                         itemCount: snapshot.data!.data![index].products![position].images!.length,
                                         itemBuilder: (context,length){
-                                        return Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Container(
-                                            height: 100,
-                                            width: 100,
-                                            decoration: BoxDecoration(
+                                        return Container(
+                                          height: 100,
+                                          width: 100,
+                                          decoration: BoxDecoration(
                                   color: Colors.blue,
                                   image: DecorationImage(
                                       fit: BoxFit.contain,
@@ -109,7 +107,6 @@ class _ProductExampleState extends State<ProductExample> {
                                       snapshot.data!.data![index].products![position].images![length].url.toString(),scale: 2,
                                   ))
                                 ),
-                                          ),
                                         );
                                       }),
                                     ),

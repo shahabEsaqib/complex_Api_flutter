@@ -2,7 +2,8 @@ import 'dart:developer';
 
 import 'package:complex_api_flutter/ProductExample.dart';
 import 'package:complex_api_flutter/login.dart';
-import 'package:complex_api_flutter/login2.dart';
+import 'package:complex_api_flutter/signupApi.dart';
+import 'package:complex_api_flutter/uploadImage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
        
         primarySwatch: Colors.blue,
       ),
-      home: ProductExample(),
+      home: UploadImage(),
     );
   }
 }

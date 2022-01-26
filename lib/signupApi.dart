@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 
-class LoginApi extends StatefulWidget {
+class SignUpApi extends StatefulWidget {
 
 
   @override
-  State<LoginApi> createState() => _LoginApiState();
+  State<SignUpApi> createState() => _SignUpApiState();
 }
 
-class _LoginApiState extends State<LoginApi> {
+class _SignUpApiState extends State<SignUpApi> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 login(String email ,password)async{
   try{
-    http.Response response = await http.post(Uri.parse("https://reqres.in/api/login"),body: {
+    http.Response response = await http.post(Uri.parse("https://reqres.in/api/register"),body: {
       'email': email,
       'password': password,
 
@@ -25,7 +25,7 @@ login(String email ,password)async{
     if(response.statusCode == 200){
       var data = jsonDecode(response.body.toString());
       print(data['token']);
-      print("Login succesfully");
+      print("sign up succesfully");
     }else{
       print("unsuccesful");
     }
@@ -40,7 +40,7 @@ login(String email ,password)async{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login api"),
+        title: Text("Sign up api"),
         
       ),
       body: Padding(
@@ -73,7 +73,7 @@ login(String email ,password)async{
                    color: Colors.green,
                    borderRadius: BorderRadius.circular(10)
                  ),
-                 child: Center(child: Text("Login")),
+                 child: Center(child: Text("Sign Up")),
                ),
              )
           ],
